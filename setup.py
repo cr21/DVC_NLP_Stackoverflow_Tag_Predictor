@@ -16,7 +16,7 @@ setup(
     version="0.0.1",
     author=AUTHOR_USER_NAME,
     author_email=AUTHOR_EMAIL,
-    description="A small package for DVC",
+    description="A small package for DVC-NLP usecase for stackoverflow prediction",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url=f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}",
