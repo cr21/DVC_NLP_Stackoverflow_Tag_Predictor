@@ -1,0 +1,134 @@
+[2022-10-24 13:08:26,445: INFO: stage_01_get_data]: 
+********************
+[2022-10-24 13:08:26,445: INFO: stage_01_get_data]: >>>>> stage stage 01 get data started <<<<<
+[2022-10-24 13:08:26,448: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-24 13:09:22,140: INFO: stage_01_get_data]: 
+********************
+[2022-10-24 13:09:22,155: INFO: stage_01_get_data]: >>>>> stage stage 01 get data started <<<<<
+[2022-10-24 13:09:22,157: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-24 13:14:14,666: INFO: stage_01_get_data]: 
+********************
+[2022-10-24 13:14:14,666: INFO: stage_01_get_data]: >>>>> stage stage 01 get data started <<<<<
+[2022-10-24 13:14:14,668: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-24 13:16:08,737: INFO: stage_01_get_data]: 
+********************
+[2022-10-24 13:16:08,737: INFO: stage_01_get_data]: >>>>> stage stage 01 get data started <<<<<
+[2022-10-24 13:16:08,737: ERROR: stage_01_get_data]: name 'read_yaml' is not defined
+Traceback (most recent call last):
+  File "src/stage_01_get_data.py", line 39, in <module>
+    main(config_path=parsed_args.config)
+  File "src/stage_01_get_data.py", line 22, in main
+    config = read_yaml(config_path)
+NameError: name 'read_yaml' is not defined
+[2022-10-24 13:16:15,281: INFO: stage_01_get_data]: 
+********************
+[2022-10-24 13:16:15,281: INFO: stage_01_get_data]: >>>>> stage stage 01 get data started <<<<<
+[2022-10-24 13:16:15,284: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-24 13:16:15,284: INFO: common]: created directory at: data
+[2022-10-24 13:18:43,180: INFO: stage_01_get_data]: 
+********************
+[2022-10-24 13:18:43,180: INFO: stage_01_get_data]: >>>>> stage stage 01 get data started <<<<<
+[2022-10-24 13:18:43,183: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-24 13:18:43,183: INFO: common]: created directory at: data
+[2022-10-24 13:18:43,183: ERROR: stage_01_get_data]: string indices must be integers
+Traceback (most recent call last):
+  File "src/stage_01_get_data.py", line 42, in <module>
+    main(config_path=parsed_args.config)
+  File "src/stage_01_get_data.py", line 28, in main
+    data_filename = config['source_data_url']['data_file']
+TypeError: string indices must be integers
+[2022-10-24 13:19:08,570: INFO: stage_01_get_data]: 
+********************
+[2022-10-24 13:19:08,570: INFO: stage_01_get_data]: >>>>> stage stage 01 get data started <<<<<
+[2022-10-24 13:19:08,572: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-24 13:19:08,572: INFO: common]: created directory at: data
+[2022-10-24 13:22:26,472: INFO: stage_01_get_data]: 
+********************
+[2022-10-24 13:22:26,472: INFO: stage_01_get_data]: >>>>> stage stage 01 get data started <<<<<
+[2022-10-24 13:22:26,474: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-24 13:22:26,475: INFO: common]: created directory at: data
+[2022-10-24 13:22:26,475: INFO: stage_01_get_data]: Download started
+[2022-10-24 13:22:27,579: ERROR: stage_01_get_data]: HTTP Error 404: Not Found
+Traceback (most recent call last):
+  File "src/stage_01_get_data.py", line 45, in <module>
+    main(config_path=parsed_args.config)
+  File "src/stage_01_get_data.py", line 31, in main
+    filename, headers = req.urlretrieve(source_data_url, local_data_file_path)
+  File "/Users/chiragtagadiya/Documents/DVC_NLP_Stackoverflow_Tag_Predictor/env/lib/python3.7/urllib/request.py", line 247, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+  File "/Users/chiragtagadiya/Documents/DVC_NLP_Stackoverflow_Tag_Predictor/env/lib/python3.7/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/Users/chiragtagadiya/Documents/DVC_NLP_Stackoverflow_Tag_Predictor/env/lib/python3.7/urllib/request.py", line 531, in open
+    response = meth(req, response)
+  File "/Users/chiragtagadiya/Documents/DVC_NLP_Stackoverflow_Tag_Predictor/env/lib/python3.7/urllib/request.py", line 641, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/Users/chiragtagadiya/Documents/DVC_NLP_Stackoverflow_Tag_Predictor/env/lib/python3.7/urllib/request.py", line 569, in error
+    return self._call_chain(*args)
+  File "/Users/chiragtagadiya/Documents/DVC_NLP_Stackoverflow_Tag_Predictor/env/lib/python3.7/urllib/request.py", line 503, in _call_chain
+    result = func(*args)
+  File "/Users/chiragtagadiya/Documents/DVC_NLP_Stackoverflow_Tag_Predictor/env/lib/python3.7/urllib/request.py", line 649, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+[2022-10-24 13:24:50,936: INFO: stage_01_get_data]: 
+********************
+[2022-10-24 13:24:50,936: INFO: stage_01_get_data]: >>>>> stage stage 01 get data started <<<<<
+[2022-10-24 13:24:50,938: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-24 13:24:50,938: INFO: common]: created directory at: data
+[2022-10-24 13:24:50,938: INFO: stage_01_get_data]: Download started
+[2022-10-24 13:24:51,663: INFO: stage_01_get_data]: Download finished
+[2022-10-24 13:24:51,663: INFO: stage_01_get_data]: Download file is present at data/data.xml
+[2022-10-24 13:24:51,665: INFO: stage_01_get_data]: Download header  Server: GitHub.com
+Date: Mon, 24 Oct 2022 17:24:51 GMT
+Content-Type: text/html; charset=utf-8
+Vary: X-PJAX, X-PJAX-Container, Turbo-Visit, Turbo-Frame, Accept-Encoding, Accept, X-Requested-With
+ETag: W/"637593a3c729413d97e1b183860ce954"
+Cache-Control: max-age=0, private, must-revalidate
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Frame-Options: deny
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Referrer-Policy: no-referrer-when-downgrade
+Expect-CT: max-age=2592000, report-uri="https://api.github.com/_private/browser/errors"
+Content-Security-Policy: default-src 'none'; base-uri 'self'; block-all-mixed-content; child-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com objects-origin.githubusercontent.com www.githubstatus.com collector.github.com raw.githubusercontent.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events *.actions.githubusercontent.com wss://*.actions.githubusercontent.com online.visualstudio.com/api/v1/locations github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src viewscreen.githubusercontent.com notebooks.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com github-cloud.s3.amazonaws.com secured-user-images.githubusercontent.com/ github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/ secured-user-images.githubusercontent.com/; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/
+Set-Cookie: _gh_sess=5TVtjRlL3cdranIM0AyVePVRnC2fEu7AMEDB6%2Fp%2BeGbgIB3DsyrM2iRizbou6U6gSlNh49RnK12WNVbbFoaQfR0gobhi0dAkAL4vt6BbwlJ4e5MSYaWn%2F9dB5IBZIAyiPyouiAWlb%2BrbMt6HX3wqwelaqjkdv77AUv2lbykTQUvoexAyWYNyM5mdKoIJbQ%2FhE6APptJIH1nYPx8EeOsigKD%2BqwGi9TFcq1rXAfvKjvSRWtxXi6yMn%2B3EMILzc2u1eoSSYg97X%2BQXmIT%2B1R3dcg%3D%3D--%2BEP34DaJFYCt5KC3--eICGxItX1r3p8wQFTiNaPw%3D%3D; Path=/; HttpOnly; Secure; SameSite=Lax
+Set-Cookie: _octo=GH1.1.39904943.1666632291; Path=/; Domain=github.com; Expires=Tue, 24 Oct 2023 17:24:51 GMT; Secure; SameSite=Lax
+Set-Cookie: logged_in=no; Path=/; Domain=github.com; Expires=Tue, 24 Oct 2023 17:24:51 GMT; HttpOnly; Secure; SameSite=Lax
+Accept-Ranges: bytes
+Transfer-Encoding: chunked
+X-GitHub-Request-Id: F60D:0D2E:2BA1068:3F5FCA4:6356CA63
+connection: close
+
+
+[2022-10-24 13:27:02,610: INFO: stage_01_get_data]: 
+********************
+[2022-10-24 13:27:02,610: INFO: stage_01_get_data]: >>>>> stage stage 01 get data started <<<<<
+[2022-10-24 13:27:02,613: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-10-24 13:27:02,613: INFO: common]: created directory at: data
+[2022-10-24 13:27:02,613: INFO: stage_01_get_data]: Download started
+[2022-10-24 13:27:09,409: INFO: stage_01_get_data]: Download finished
+[2022-10-24 13:27:09,409: INFO: stage_01_get_data]: Download file is present at data/data.xml
+[2022-10-24 13:27:09,411: INFO: stage_01_get_data]: Download header  Connection: close
+Content-Length: 37891850
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: text/plain; charset=utf-8
+ETag: "e91f4d2e79189152e515768f642e9aad447731481b36e65348f8c0b7c6a3f86c"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 6F56:411D:8E3E07:BD8776:6356CAE6
+Accept-Ranges: bytes
+Date: Mon, 24 Oct 2022 17:27:03 GMT
+Via: 1.1 varnish
+X-Served-By: cache-bos4625-BOS
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1666632423.876975,VS0,VE495
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+X-Fastly-Request-ID: aeac391e1bc4431b56186291c32d218b2495e55d
+Expires: Mon, 24 Oct 2022 17:32:03 GMT
+Source-Age: 0
+
+
