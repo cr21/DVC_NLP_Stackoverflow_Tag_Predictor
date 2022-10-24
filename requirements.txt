@@ -4,6 +4,7 @@ dvc
 pandas
 numpy
 PyYAML
+dvc[s3]
 
 ### local packages -
 # -e . # << uncomment this to install from setup.py
