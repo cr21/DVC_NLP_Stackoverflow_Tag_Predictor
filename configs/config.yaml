@@ -25,3 +25,11 @@ source_download_dir:
   data_file: data.xml
 
 
+metrics:
+  SCORES: scores.json
+  
+plots:
+  PRC: prc.json
+  ROC: roc.json
+
+
