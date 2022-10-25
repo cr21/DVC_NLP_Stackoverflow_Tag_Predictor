@@ -26,8 +26,8 @@ def main(config_path, params_path):
 
     featured_data_dir_path = os.path.join(artifacts['ARTIFACTS_DIR'],artifacts['FEATURIZED_DATA'])
     create_directories([featured_data_dir_path])
-    featurized_train_data_path = os.path.join(prepared_data_dir_path,artifacts['FEATURIZED_TRAIN_DATA'])
-    featurized_test_data_path = os.path.join(prepared_data_dir_path,artifacts['FEATURIZED_TEST_DATA'])
+    featurized_train_data_path = os.path.join(featured_data_dir_path,artifacts['FEATURIZED_TRAIN_DATA'])
+    featurized_test_data_path = os.path.join(featured_data_dir_path,artifacts['FEATURIZED_TEST_DATA'])
 
     train_df = get_df(train_data_path)
     train_words = np.array(train_df.text.str.lower().values.astype("U"))
