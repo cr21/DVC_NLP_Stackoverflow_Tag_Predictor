@@ -38,3 +38,16 @@ stages:
       - artifacts/features/test.pkl
       - artifacts/features/train.pkl
 
+  train:
+    cmd: python src/stage_04_model_training.py --config=configs/config.yaml --params=params.yaml
+    deps:
+      - src/stage_04_model_training.py
+      - configs/config.yaml
+      - artifacts/features/test.pkl
+      - artifacts/features/train.pkl
+    params:
+      - train.seed
+      - train.n_est
+      - train.min_split
+    outs:
+      - artifacts/model/model.pkl
