@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>DVC Plot</title>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.18.2"></script>
+    
+</head>
+<body>
+    
+    <div id = "plot_prc_json">
+        <script type = "text/javascript">
+            var spec = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "data": {
+        "values": [
+    {
+        "filename": "prc.json",
+        "precision": 0.022198448783097086,
+        "recall": 1.0,
+        "rev": "workspace",
+        "threshold": 0.0
+    },
+    {
+        "filename": "prc.json",
+        "precision": 0.021771467207572684,
+        "recall": 0.9698795180722891,
+        "rev": "workspace",
+        "threshold": 3.383762559186973e-05
+    },
+    {
+        "filename": "prc.json",
+        "precision": 0.021639166892074655,
+        "recall": 0.963855421686747,
+        "rev": "workspace",
+        "threshold": 0.0002857142857142857
+    },
+    {
+        "filename": "prc.json",
+        "precision": 0.02164209387258217,
+        "recall": 0.963855421686747,
+        "rev": "workspace",
+        "threshold": 0.002
+    },
+    {
+        "filename": "prc.json",
+        "precision": 0.021645021645021644,
+        "recall": 0.963855421686747,
+        "rev": "workspace",
+        "threshold": 0.003318262335526143
+    },
+    {
+        "filename": "prc.json",
+        "precision": 0.02164795020971452,
+        "recall": 0.963855421686747,
+        "rev": "workspace",
+        "threshold": 0.018593084182585425
+    },
+    {
+        "filename": "prc.json",
+        "precision": 0.0,
+        "recall": 0.0,
+        "rev": "workspace",
+        "threshold": 0.026864038695904528
+    },
+    {
+        "filename": "prc.json",
+        "precision": 0.0,
+        "recall": 0.0,
+        "rev": "workspace",
+        "threshold": 0.076
+    },
+    {
+        "filename": "prc.json",
+        "precision": 0.0,
+        "recall": 0.0,
+        "rev": "workspace",
+        "threshold": 0.09309239250167473
+    },
+    {
+        "filename": "prc.json",
+        "precision": 0.022198448783097086,
+        "recall": 1.0,
+        "rev": "HEAD",
+        "threshold": 0.0
+    },
+    {
+        "filename": "prc.json",
+        "precision": 0.021645021645021644,
+        "recall": 0.963855421686747,
+        "rev": "HEAD",
+        "threshold": 0.018624381343142458
+    },
+    {
+        "filename": "prc.json",
+        "precision": 0.0,
+        "recall": 0.0,
+        "rev": "HEAD",
+        "threshold": 0.02
+    },
+    {
+        "filename": "prc.json",
+        "precision": 0.0,
+        "recall": 0.0,
+        "rev": "HEAD",
+        "threshold": 0.08286134654283461
+    },
+    {
+        "filename": "prc.json",
+        "precision": 0.0,
+        "recall": 0.0,
+        "rev": "HEAD",
+        "threshold": 0.11872839615988419
+    },
+    {
+        "filename": "prc.json",
+        "precision": 0.0,
+        "recall": 0.0,
+        "rev": "HEAD",
+        "threshold": 0.27
+    }
+]
+    },
+    "title": "",
+    "width": 300,
+    "height": 300,
+    "layer": [
+        {
+            "encoding": {
+                "x": {
+                    "field": "recall",
+                    "type": "quantitative",
+                    "title": "recall"
+                },
+                "y": {
+                    "field": "precision",
+                    "type": "quantitative",
+                    "title": "precision",
+                    "scale": {
+                        "zero": false
+                    }
+                },
+                "color": {
+                    "field": "rev",
+                    "type": "nominal"
+                }
+            },
+            "layer": [
+                {
+                    "mark": "line"
+                },
+                {
+                    "selection": {
+                        "label": {
+                            "type": "single",
+                            "nearest": true,
+                            "on": "mouseover",
+                            "encodings": [
+                                "x"
+                            ],
+                            "empty": "none",
+                            "clear": "mouseout"
+                        }
+                    },
+                    "mark": "point",
+                    "encoding": {
+                        "opacity": {
+                            "condition": {
+                                "selection": "label",
+                                "value": 1
+                            },
+                            "value": 0
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "transform": [
+                {
+                    "filter": {
+                        "selection": "label"
+                    }
+                }
+            ],
+            "layer": [
+                {
+                    "mark": {
+                        "type": "rule",
+                        "color": "gray"
+                    },
+                    "encoding": {
+                        "x": {
+                            "field": "recall",
+                            "type": "quantitative"
+                        }
+                    }
+                },
+                {
+                    "encoding": {
+                        "text": {
+                            "type": "quantitative",
+                            "field": "precision"
+                        },
+                        "x": {
+                            "field": "recall",
+                            "type": "quantitative"
+                        },
+                        "y": {
+                            "field": "precision",
+                            "type": "quantitative"
+                        }
+                    },
+                    "layer": [
+                        {
+                            "mark": {
+                                "type": "text",
+                                "align": "left",
+                                "dx": 5,
+                                "dy": -5
+                            },
+                            "encoding": {
+                                "color": {
+                                    "type": "nominal",
+                                    "field": "rev"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+;
+            vegaEmbed('#plot_prc_json', spec);
+        </script>
+    </div>
+    
+
+    <div id = "plot_roc_json">
+        <script type = "text/javascript">
+            var spec = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "data": {
+        "values": [
+    {
+        "filename": "roc.json",
+        "fpr": 0.0,
+        "rev": "workspace",
+        "threshold": 1.0930923925016747,
+        "tpr": 0.0
+    },
+    {
+        "filename": "roc.json",
+        "fpr": 0.00041028446389496716,
+        "rev": "workspace",
+        "threshold": 0.09309239250167473,
+        "tpr": 0.0
+    },
+    {
+        "filename": "roc.json",
+        "fpr": 0.0006838074398249453,
+        "rev": "workspace",
+        "threshold": 0.026864038695904528,
+        "tpr": 0.0
+    },
+    {
+        "filename": "roc.json",
+        "fpr": 0.9889223194748359,
+        "rev": "workspace",
+        "threshold": 0.018593084182585425,
+        "tpr": 0.963855421686747
+    },
+    {
+        "filename": "roc.json",
+        "fpr": 0.9893326039387309,
+        "rev": "workspace",
+        "threshold": 0.0002857142857142857,
+        "tpr": 0.963855421686747
+    },
+    {
+        "filename": "roc.json",
+        "fpr": 0.9893326039387309,
+        "rev": "workspace",
+        "threshold": 3.383762559186973e-05,
+        "tpr": 0.9698795180722891
+    },
+    {
+        "filename": "roc.json",
+        "fpr": 1.0,
+        "rev": "workspace",
+        "threshold": 0.0,
+        "tpr": 1.0
+    },
+    {
+        "filename": "roc.json",
+        "fpr": 0.0,
+        "rev": "HEAD",
+        "threshold": 1.27,
+        "tpr": 0.0
+    },
+    {
+        "filename": "roc.json",
+        "fpr": 0.00013676148796498905,
+        "rev": "HEAD",
+        "threshold": 0.27,
+        "tpr": 0.0
+    },
+    {
+        "filename": "roc.json",
+        "fpr": 0.0005470459518599562,
+        "rev": "HEAD",
+        "threshold": 0.11872839615988419,
+        "tpr": 0.0
+    },
+    {
+        "filename": "roc.json",
+        "fpr": 0.0008205689277899343,
+        "rev": "HEAD",
+        "threshold": 0.02,
+        "tpr": 0.0
+    },
+    {
+        "filename": "roc.json",
+        "fpr": 0.9890590809628009,
+        "rev": "HEAD",
+        "threshold": 0.018624381343142458,
+        "tpr": 0.963855421686747
+    },
+    {
+        "filename": "roc.json",
+        "fpr": 1.0,
+        "rev": "HEAD",
+        "threshold": 0.0,
+        "tpr": 1.0
+    }
+]
+    },
+    "title": "",
+    "width": 300,
+    "height": 300,
+    "layer": [
+        {
+            "encoding": {
+                "x": {
+                    "field": "fpr",
+                    "type": "quantitative",
+                    "title": "fpr"
+                },
+                "y": {
+                    "field": "tpr",
+                    "type": "quantitative",
+                    "title": "tpr",
+                    "scale": {
+                        "zero": false
+                    }
+                },
+                "color": {
+                    "field": "rev",
+                    "type": "nominal"
+                }
+            },
+            "layer": [
+                {
+                    "mark": "line"
+                },
+                {
+                    "selection": {
+                        "label": {
+                            "type": "single",
+                            "nearest": true,
+                            "on": "mouseover",
+                            "encodings": [
+                                "x"
+                            ],
+                            "empty": "none",
+                            "clear": "mouseout"
+                        }
+                    },
+                    "mark": "point",
+                    "encoding": {
+                        "opacity": {
+                            "condition": {
+                                "selection": "label",
+                                "value": 1
+                            },
+                            "value": 0
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "transform": [
+                {
+                    "filter": {
+                        "selection": "label"
+                    }
+                }
+            ],
+            "layer": [
+                {
+                    "mark": {
+                        "type": "rule",
+                        "color": "gray"
+                    },
+                    "encoding": {
+                        "x": {
+                            "field": "fpr",
+                            "type": "quantitative"
+                        }
+                    }
+                },
+                {
+                    "encoding": {
+                        "text": {
+                            "type": "quantitative",
+                            "field": "tpr"
+                        },
+                        "x": {
+                            "field": "fpr",
+                            "type": "quantitative"
+                        },
+                        "y": {
+                            "field": "tpr",
+                            "type": "quantitative"
+                        }
+                    },
+                    "layer": [
+                        {
+                            "mark": {
+                                "type": "text",
+                                "align": "left",
+                                "dx": 5,
+                                "dy": -5
+                            },
+                            "encoding": {
+                                "color": {
+                                    "type": "nominal",
+                                    "field": "rev"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+;
+            vegaEmbed('#plot_roc_json', spec);
+        </script>
+    </div>
+    
+</body>
+</html>
