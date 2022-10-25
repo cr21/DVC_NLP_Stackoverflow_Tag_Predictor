@@ -8,6 +8,8 @@ artifacts:
   FEATURIZED_DATA: features
   FEATURIZED_TRAIN_DATA: train.pkl
   FEATURIZED_TEST_DATA: test.pkl
+  MODEL_DIR : model
+  MODEL_NAME : model.pkl
   # TRAINED_MODEL_DIR: model
   # BASE_MODEL_DIR: base_model
   # BASE_MODEL_NAME: base_model.h5
