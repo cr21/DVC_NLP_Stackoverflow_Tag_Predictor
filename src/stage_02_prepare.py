@@ -38,7 +38,7 @@ def main(config_path, params_path):
     seed = params['prepare']['seed']
     split = params['prepare']['split']
     encode = 'utf8'
-
+    random.seed(seed)
     with open(input_data_file_path, encoding=encode) as file_in:
         with open(train_data_path,'w', encoding=encode) as file_train_out:
             with open(test_data_path, 'w',encoding=encode) as file_test_out:
