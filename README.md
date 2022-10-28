@@ -5,7 +5,7 @@
 - Used DVC to monitor end to end pipeline results.
 
 # Project Workflow
-![project_workflow](blob/main/project_workflow/DVC.jpeg)
+![project_workflow](project_workflow/dvc.png)
 # dvc-project-template
 DVC project template
 
