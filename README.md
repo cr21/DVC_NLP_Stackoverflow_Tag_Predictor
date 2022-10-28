@@ -1,13 +1,13 @@
+# DVC NLP Stackoverflow Tag Predictor
+- we will build simple **binary classfication to classify Stackoverflow question into Python tags or non Python Tags.**
+- This project is simple **implementation of End To End ML Pipeline using DVC Tool.**
+- Using **GitHub Actions for tracking ML Workflow.**
+- Used DVC to monitor end to end pipeline results.
+
+
 # dvc-project-template
 DVC project template
 
-## STEPS -
-
-### STEP 01- Create a repository by using template repository
-
-### STEP 02- Clone the new repository
-
-### STEP 03- Create a conda environment after opening the repository in VSCODE
 
 ```bash
 conda create --prefix ./env python=3.7 -y
@@ -31,4 +31,10 @@ pip install -r requirements.txt
 dvc init
 ```
 
-### STEP 06- commit and push the changes to the remote repository
+### STEP 06- reproduce training
+```bash
+dvc repro
+```
+
+
+
