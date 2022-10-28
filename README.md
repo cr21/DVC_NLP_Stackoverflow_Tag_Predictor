@@ -4,7 +4,8 @@
 - Using **GitHub Actions for tracking ML Workflow.**
 - Used DVC to monitor end to end pipeline results.
 
-
+# Project Workflow
+![project_workflow](blob/main/project_workflow/DVC.jpeg)
 # dvc-project-template
 DVC project template
 
